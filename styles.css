@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.navbar {
+  width: 270px;
+  height: 100%;
+  background-color: midnightblue;
+  position: fixed; /* Bunu iptal edip dene! */
+  right: -270px; /* basta 0 iken kodu bitirip, sonra default olarak sayfa acildiginda ekranda gorunmesin diye sagdan disari attik */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30% 0 0 80%;
+  transition: right .5s; /* cubic-bezier(1, 0, 0, 1 kodu ile animasyonun hizli baslayip hizli bitmesini saglayabiliriz */
+}
+
+.logo {
+  height: 10vh;
+  width: 150px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%
+}
+
+span {
+  color: lightseagreen;
+}
+
+.hamburger-menu {
+  height: 30px;
+  width: 34px;
+  position: fixed; /* Bunu iptal edip dene! */
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: chocolate;
+  transition: all .5s;
+}
+
+.ezclap .bar-1 { /* .ezclap classini js'ye gecmeden hemen once, js'de 3 ayri bar-1,2,3 yazamayacagimiz icin, bar classini da tekrar burada kullanamayacagimiz icin, tek class ismi olarak eklendi */
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.ezclap .bar-2 { /* .ezclap classini js'ye gecmeden hemen once, js'de 3 ayri bar-1,2,3 yazamayacagimiz icin tek class ismi olarak eklendi */
+  opacity: 0;
+}
+
+.ezclap .bar-3 { /* .ezclap classini js'ye gecmeden hemen once, js'de 3 ayri bar-1,2,3 yazamayacagimiz icin tek class ismi olarak eklendi */
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+
+/* Navbari default olarak kendi kalinligi (280px) kadar
+ekranin sagdan disina atmistik, asagidaki kodla tekrar
+menu iconuna tiklayinca ekranin sag kenarina sabitliyoruz. */
+.ezclap {
+  right: 0;
+}
+
+.nav-list {
+  text-align: right;
+}
+
+.nav-item {
+  list-style: none;
+  margin: 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Harfler arasini acmak icin */
+}
+
+a:hover {
+  color: red;
+}
